@@ -15,8 +15,13 @@ class ArticlesController < ApplicationController
     end
 
     def create
+        # byebug
         # render plain: params[:article].inspect
         @article = Article.new(article_params)
+
+        #temporaty User id for article
+        @article.user = User.first 
+
 
         if @article.save
             flash[:success] = "Articles was successfully created"
