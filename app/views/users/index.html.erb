@@ -1,6 +1,8 @@
 <h1 align="center">All Apha Blogger</h1>
 
+
 <div align="center">
+ <%= will_paginate %>
     <% @users.each do |user| %>
         <ul class="listing">
             <div class="row">
@@ -12,15 +14,8 @@
 
                 <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
 
-
                 </div>
-
-
             </div>
-
-
         </ul>
-
-
     <% end %>
 </div>
