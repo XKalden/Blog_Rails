@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
 
         #temporaty User id for article
-        @article.user = User.last
+        @article.user = current_user
 
 
         if @article.save
