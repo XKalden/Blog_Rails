@@ -1,21 +1,49 @@
 
 <div class="center jumbotron">
   <h1>KALDEN BLOG!</h1>
+  <%= link_to "Sign Up Now", signup_path , class: "btn btn-danger btn-xlg btn-xlarge" %>
+</div>
 
-  <%= link_to "Sign Up Now", "#", class: "btn btn-danger btn-xlg btn-xlarge" %>
+<div class="box">
+  <div id="card-container">
+    <div id="card">
+      <div class="front face">
+       <%= link_to image_tag('user.png'), signup_path %>
+      </div>
+      <div class="back face">
+        <h1>User</h1>
+        <p class="artist"><strong>Click to Signup</strong></p>
+        <p class="date"></p>
+      </div>
+    </div>
+  </div>
 
+  <div id="card-container">
+    <div id="card2">
+      <div class="front face">
+        <%= link_to image_tag('pencil.png'), articles_path %>
+      </div>
+      <div class="back face">
+        <h1>Edit</h1>
+        <p class="artist">Signup to Edit</p>
+        <p class="date"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="card-container">
+    <div id="card3">
+      <div class="front face">
+       <%= link_to image_tag('articles.png'), articles_path %>
+      </div>
+      <div class="back face">
+        <h1>Article</h1>
+        <p class="artist">Post Articles</p>
+        <p class="date"></p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
-<%= image_tag 'dog.jpg' %>
-
-<%= link_to image_tag('dog.jpg'), 'https://www.youtube.com/' %>
-
-
-
-<br>
-<%= link_to "Blog", articles_path %>
-<br>
-
-<%= link_to "About", about_path %>
